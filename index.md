@@ -1,6 +1,6 @@
 ---
 layout: page
-title:
+title: 最新文章
 ---
 {% include JB/setup %}
 
