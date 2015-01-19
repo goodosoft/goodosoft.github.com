@@ -6,6 +6,7 @@ category: [learn]
 tags: [django]
 ---
 {% include JB/setup %}
+
 ### Django 默认值： 
 >LANGUAGE_CODE = 'en-us'  
 >TIME_ZONE = 'UTC'  
