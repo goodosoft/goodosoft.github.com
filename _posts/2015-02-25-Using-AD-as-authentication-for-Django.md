@@ -13,8 +13,10 @@ tags: [django,AD,活动目录,ldap]
 ### 自定义认证 
 网上没有现成的包，干脆自己写一个自定义的认证。 
 不过如果你是做openldap认证的话，可以看一下 django_python3_ldap。 
+
 #### 新建一个叫accounts的app 
 > python manage.py startapp accounts 
+
 #### 在view里添加一个自定义认证的类 
     class ActiveDirectoryBackend:
     def authenticate(self,username=None,password=None):
@@ -53,6 +55,7 @@ tags: [django,AD,活动目录,ldap]
         except User.DoesNotExist:
             return None
 > 其中域控服务器和用户名，邮箱地址根据实际情况修改。 
+
 ### 在settings.py里的INSTALLED_APPS添加accounts 
     INSTALLED_APPS = (
     'django.contrib.admin',
@@ -62,6 +65,7 @@ tags: [django,AD,活动目录,ldap]
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',)
+
 ### 在setting.py里添加自定义认证 
 	AUTHENTICATION_BACKENDS=('accounts.views.ActiveDirectoryBackend',
                          'django.contrib.auth.backends.ModelBackend',) 
