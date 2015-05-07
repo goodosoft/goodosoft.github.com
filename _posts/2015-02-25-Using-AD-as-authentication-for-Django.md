@@ -23,7 +23,7 @@ tags: [django,AD,活动目录,ldap]
         try:
             if len(password) == 0:
                 return None
-            s = Server('ldaps://dc.example.msf', port = 636, get_info = GET_ALL_INFO)  # define an unsecure LDAP server, requesting info on DSE and schema
+            s = Server('ldaps://dc.example.msf', port = 636, get_info = None)  # define an unsecure LDAP server, requesting info on DSE and schema
             c = Connection(s, 
                        auto_bind = True, 
                        client_strategy = STRATEGY_SYNC, 
