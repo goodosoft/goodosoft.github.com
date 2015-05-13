@@ -3,7 +3,7 @@ layout: post
 title: "加解密django model field数据库字段"
 description: "encryption decryption django model field"
 category: [learn]
-tags: [Django]
+tags: [django]
 ---
 {% include JB/setup %}
 
