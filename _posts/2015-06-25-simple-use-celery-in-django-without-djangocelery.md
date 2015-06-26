@@ -51,7 +51,7 @@ celery是一个不错的分布式任务队列，在3.1版本之前需要安装dj
     # Django starts so that shared_task will use this app.
     from .celery import app as celery_app 
 
-#### 然后就可以在应用app里编写自己的task.py，例如demoapp/tasks.py:  
+#### 然后就可以在应用app里编写自己的tasks.py，例如demoapp/tasks.py:  
     from __future__ import absolute_import
     
     from celery import shared_task
@@ -59,13 +59,18 @@ celery是一个不错的分布式任务队列，在3.1版本之前需要安装dj
     @shared_task
     def add(x, y):
         return x + y
+
 #### 注意：这里并没有存储分布式任务的结果，如果你想把结果存在django数据库里，需要安装django-celery。  
-  
+
+#### RabbitMQ 是默认的中间人，所以除了需要你要使用的中间人实例的 URL 位置， 它并不需要任何额外的依赖或起始配置:
+>BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 
 #### 在服务器上启动
 >celery -A proj worker -l info
 
 #### 在你的app里调用一下task.py里的任务试试吧
+>from .tasks import add
+>add.delay(1,1)
 
 ### 参考资料： 
 - [celery官方文档](http://celery.readthedocs.org/en/latest/django/first-steps-with-django.html#using-celery-with-django)
