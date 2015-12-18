@@ -66,6 +66,7 @@ tags: [vim]
     set expandtab " 用space替代tab的输入
     set autoindent " 自动对齐
     set smartindent " 智能自动缩进
+    set shiftwidth=4 "设置缩进宽度为 4
     set backspace=2 " 设置退格键可用
     set ai! " 设置自动缩进
     set nu! " 显示行号
