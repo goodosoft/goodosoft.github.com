@@ -62,7 +62,7 @@ tags: [django]
 
 ### 创建模版 locked_out.html ###
     <form action="" method="post">
-	    `{% csrf_token %}`
+	    #手动加一下csrf_token
 	
 	    {{ form.captcha.errors }}
 	    {{ form.captcha }}
