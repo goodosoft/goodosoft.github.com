@@ -1,4 +1,11 @@
-# 内部项目研发规范 #
+---
+layout: post
+title: "内部项目研发规范"
+description: "internal project style guide"
+category: [learn]
+tags: [django]
+---
+{% include JB/setup %}
 
 ## 开发语言：python3.4 ##
 - 下载地址：https://www.python.org/ftp/python/3.4.5/Python-3.4.5.tar.xz
