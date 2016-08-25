@@ -22,9 +22,9 @@ tags: [django]
 
 ## 版本控制：Git ##
 - [Git简明教程](https://git-scm.com/book/zh/v2)
-- 工作流参考了[GitHub Flow](https://guides.github.com/introduction/flow/)
--
-    **要及时commit，不要让一个commit承担过多内容；**
+- [GitHub Flow](https://guides.github.com/introduction/flow/)
+- 内部项目git工作流：
+    0. **要及时commit，不要让一个commit承担过多内容；**
     1. 从master分支根据issue来创建分支；
     2. 在本地开发环境确保issue完成后commit代码；
     3. 进行git fetch --all，拉取下来master分支的代码，合并到自己的分支，解决冲突;
